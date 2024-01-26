@@ -1,7 +1,7 @@
 all: 
-	@c++ -o Fixed3 main.cpp Fixed.cpp -Wall -Wextra -Werror 
+	@c++ -o fixed main.cpp Fixed.cpp -Wall -Wextra -Werror 
 	@echo "Derlendi"
 fclean:
-	rm -rf Fixed3
+	rm -rf fixed
 
 re: fclean all
