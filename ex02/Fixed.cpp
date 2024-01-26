@@ -54,7 +54,7 @@ bool Fixed::operator==(const Fixed &right) {
 }
 
 bool Fixed::operator!=(const Fixed &right) {
-    return (this->getRawBits() == right.getRawBits());
+    return (this->getRawBits() != right.getRawBits());
 }
 
 Fixed Fixed::operator+(const Fixed &right) {
