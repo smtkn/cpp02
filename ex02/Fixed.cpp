@@ -59,7 +59,7 @@ bool Fixed::operator!=(const Fixed &right) {
 
 Fixed Fixed::operator+(const Fixed &right) {
     Fixed ret(this->toFloat() + right.toFloat());
-    return (ret);
+    return (ret); // Nesne dönmesinin sebebi, return edilen nesnenin kopyasının oluşturulması.
 }
 
 Fixed Fixed::operator-(const Fixed &right) {
@@ -97,7 +97,6 @@ Fixed Fixed::operator--() {
 Fixed Fixed::operator--(int) {
     Fixed temp;
     temp.setRawBits(this->number);
-
     this->number--;
     return (temp);
 }
