@@ -17,16 +17,16 @@ public:
         ~Fixed();
 
         Fixed &operator=(const Fixed &other);
-        bool operator>(const Fixed &left);
-        bool operator<(const Fixed &left);
-        bool operator<=(const Fixed &left);
-        bool operator>=(const Fixed &left);
-        bool operator==(const Fixed &left);
-        bool operator!=(const Fixed &left);
-        Fixed operator+(const Fixed &left);
-        Fixed operator-(const Fixed &left);
-        Fixed operator*(const Fixed &left);
-        Fixed operator/(const Fixed &left);
+        bool operator>(const Fixed &right);
+        bool operator<(const Fixed &right);
+        bool operator<=(const Fixed &right);
+        bool operator>=(const Fixed &right);
+        bool operator==(const Fixed &right);
+        bool operator!=(const Fixed &right);
+        Fixed operator+(const Fixed &right);
+        Fixed operator-(const Fixed &right);
+        Fixed operator*(const Fixed &right);
+        Fixed operator/(const Fixed &right);
         Fixed operator++();
         Fixed operator--();
         Fixed operator++(int);

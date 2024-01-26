@@ -32,48 +32,48 @@ std::ostream &operator<<(std::ostream &output, const Fixed &obj) {
     return (output);
 }
 
-bool Fixed::operator>(const Fixed &left) {
-    return (this->getRawBits() > left.getRawBits());
+bool Fixed::operator>(const Fixed &right) {
+    return (this->getRawBits() > right.getRawBits());
 }
 
 
-bool Fixed::operator<(const Fixed &left) {
-    return (this->getRawBits() < left.getRawBits());
+bool Fixed::operator<(const Fixed &right) {
+    return (this->getRawBits() < right.getRawBits());
 }
 
-bool Fixed::operator<=(const Fixed &left) {
-    return (this->getRawBits() <= left.getRawBits());
+bool Fixed::operator<=(const Fixed &right) {
+    return (this->getRawBits() <= right.getRawBits());
 }
 
-bool Fixed::operator>=(const Fixed &left) {
-    return (this->getRawBits() >= left.getRawBits());
+bool Fixed::operator>=(const Fixed &right) {
+    return (this->getRawBits() >= right.getRawBits());
 }
 
-bool Fixed::operator==(const Fixed &left) {
-    return (this->getRawBits() == left.getRawBits());
+bool Fixed::operator==(const Fixed &right) {
+    return (this->getRawBits() == right.getRawBits());
 }
 
-bool Fixed::operator!=(const Fixed &left) {
-    return (this->getRawBits() == left.getRawBits());
+bool Fixed::operator!=(const Fixed &right) {
+    return (this->getRawBits() == right.getRawBits());
 }
 
-Fixed Fixed::operator+(const Fixed &left) {
-    Fixed ret(this->toFloat() + left.toFloat());
+Fixed Fixed::operator+(const Fixed &right) {
+    Fixed ret(this->toFloat() + right.toFloat());
     return (ret);
 }
 
-Fixed Fixed::operator-(const Fixed &left) {
-    Fixed ret(this->toFloat() - left.toFloat());
+Fixed Fixed::operator-(const Fixed &right) {
+    Fixed ret(this->toFloat() - right.toFloat());
     return (ret);
 }
 
-Fixed Fixed::operator*(const Fixed &left) {
-    Fixed ret(this->toFloat() * left.toFloat());
+Fixed Fixed::operator*(const Fixed &right) {
+    Fixed ret(this->toFloat() * right.toFloat());
     return (ret);
 }
 
-Fixed Fixed::operator/(const Fixed &left) {
-    Fixed ret(this->toFloat() / left.toFloat());
+Fixed Fixed::operator/(const Fixed &right) {
+    Fixed ret(this->toFloat() / right.toFloat());
     return (ret);
 }
 
