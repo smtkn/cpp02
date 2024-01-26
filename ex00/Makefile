@@ -1,7 +1,23 @@
-all: 
-	@c++ -o fixed main.cpp Fixed.cpp -Wall -Wextra -Werror 
-	@echo "Derlendi"
-fclean:
-	rm -rf fixed
+SRC = Fixed.cpp main.cpp
+OBJ = $(SRC:.cpp=.o)
+CC = c++
+RM = rm -f
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-re: fclean all
+NAME = fixed
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
+	@echo "Compilation done!"
+
+clean:
+	$(RM) $(OBJ)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean $(NAME)
+
+.PHONY: all clean fclean re
