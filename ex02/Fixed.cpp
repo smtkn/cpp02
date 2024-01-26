@@ -85,7 +85,6 @@ Fixed Fixed::operator++() {
 Fixed Fixed::operator++(int) {
     Fixed temp;
     temp.setRawBits(this->number);
-
     this->number++;
     return (temp);
 }
